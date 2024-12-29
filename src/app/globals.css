@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-background: #152028; /* Primary background color */
+  --color-background-focused: #101b23; /* Background color for focused elements */
+  --color-primary: #70b01f; /* Primary accent color */
+  --color-secondary: #0084ff; /* Secondary accent color */
+  --color-border: #7f8c96; /* Border color */
+  --color-surface: #202e39; /* Surface or secondary background color */
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
 }
