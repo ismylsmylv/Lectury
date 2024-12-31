@@ -15,12 +15,7 @@ export const navs = [
     icon: ""
   },
   {
-    title: "",
-    url: "",
-    icon: ""
-  },
-  {
-    title: "",
+    title: "Groups",
     url: "",
     icon: ""
   }
