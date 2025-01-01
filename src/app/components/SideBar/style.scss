@@ -1,0 +1,26 @@
+.SideBar {
+    padding: 20px;
+    padding-right: 0;
+
+    .navs {
+        max-width: 200px;
+        width: 100%;
+
+        .nav {
+            color: var(--color-border);
+
+            &:hover {
+                color: var(--color-white);
+                background-color: var(--color-background-focused);
+            }
+        }
+
+        .active {
+            border-top-right-radius: 0;
+            color: var(--color-white);
+            border-bottom-right-radius: 0;
+            border-right: 2px solid var(--color-primary);
+        }
+
+    }
+}

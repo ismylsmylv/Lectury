@@ -1,11 +1,11 @@
-import { RiHome5Fill } from "react-icons/ri";
-import { RiHome5Line } from "react-icons/ri";
-import { MdForum } from "react-icons/md";
-import { MdOutlineForum } from "react-icons/md";
-import { MdPermMedia } from "react-icons/md";
-import { MdOutlinePermMedia } from "react-icons/md";
-import { MdGroups } from "react-icons/md";
-import { MdOutlineGroups } from "react-icons/md";
+import { IoDocumentsOutline, IoDocumentsSharp } from "react-icons/io5";
+import {
+  MdForum,
+  MdGroups,
+  MdOutlineForum,
+  MdOutlineGroups
+} from "react-icons/md";
+import { RiHome5Fill, RiHome5Line } from "react-icons/ri";
 export const navs = [
   {
     title: "Home",
@@ -22,8 +22,8 @@ export const navs = [
   {
     title: "Resources",
     url: "resources",
-    iconFilled: MdPermMedia,
-    iconOutline: MdOutlinePermMedia
+    iconFilled: IoDocumentsSharp,
+    iconOutline: IoDocumentsOutline
   },
   {
     title: "Groups",

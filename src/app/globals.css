@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 100ms linear;
 }
 
 :root {
@@ -14,6 +15,7 @@
   --color-primary: #70b01f; /* Primary accent color */
   --color-secondary: #0084ff; /* Secondary accent color */
   --color-border: #7f8c96; /* Border color */
+  --color-white: #ffffff; /* Border color */
   --color-surface: #202e39; /* Surface or secondary background color */
 }
 body {
