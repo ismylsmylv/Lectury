@@ -3,31 +3,33 @@ import React, { useState } from "react";
 import { navs } from "./mockdata";
 import { v4 as uuidv4 } from "uuid";
 import "./style.scss";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 type Props = {};
 
 function SideBar({}: Props) {
-  const [active, setactive] = useState("");
+  const pathname = usePathname();
+
   return (
     <div className="SideBar">
+      {pathname}
       <div className="logo">Lectury</div>
       <div className="navs">
         {navs.map((nav) => (
-          <div
-            onClick={() => {
-              setactive(nav.title);
-            }}
+          <Link
+            href={nav.url}
             className={`nav flex items-center justify-start gap-4 mb-2 cursor-pointer p-4 pr-10 w-full rounded ${
-              active === nav.title && "active"
+              pathname === `${nav.url}` && "active"
             }`}
             key={uuidv4()}
           >
-            {active ? (
+            {pathname === `${nav.url}` ? (
               <nav.iconFilled size={25} />
             ) : (
               <nav.iconOutline size={25} />
             )}
             {nav.title}
-          </div>
+          </Link>
         ))}
       </div>
     </div>

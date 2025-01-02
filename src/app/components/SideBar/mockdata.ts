@@ -9,25 +9,25 @@ import { RiHome5Fill, RiHome5Line } from "react-icons/ri";
 export const navs = [
   {
     title: "Home",
-    url: "home",
+    url: "/",
     iconFilled: RiHome5Fill,
     iconOutline: RiHome5Line
   },
   {
     title: "Forums",
-    url: "forums",
+    url: "/forums",
     iconFilled: MdForum,
     iconOutline: MdOutlineForum
   },
   {
     title: "Resources",
-    url: "resources",
+    url: "/resources",
     iconFilled: IoDocumentsSharp,
     iconOutline: IoDocumentsOutline
   },
   {
     title: "Groups",
-    url: "groups",
+    url: "/groups",
     iconFilled: MdGroups,
     iconOutline: MdOutlineGroups
   }
