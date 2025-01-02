@@ -1,4 +1,4 @@
-import { IoDocumentsOutline, IoDocumentsSharp } from "react-icons/io5";
+import { IoDocuments, IoDocumentsOutline } from "react-icons/io5";
 import {
   MdForum,
   MdGroups,
@@ -22,7 +22,7 @@ export const navs = [
   {
     title: "Resources",
     url: "/resources",
-    iconFilled: IoDocumentsSharp,
+    iconFilled: IoDocuments,
     iconOutline: IoDocumentsOutline
   },
   {
