@@ -6,7 +6,7 @@ import "./style.scss";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import LogoImg from "@/app/assets/img/logo_banner_transparent.png";
+import LogoImg from "@/app/assets/img/logo_banner_transparent.svg";
 type Props = {};
 
 function SideBar({}: Props) {
