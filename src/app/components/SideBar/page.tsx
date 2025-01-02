@@ -5,6 +5,8 @@ import { v4 as uuidv4 } from "uuid";
 import "./style.scss";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
+import LogoImg from "@/app/assets/img/logo_banner_transparent.png";
 type Props = {};
 
 function SideBar({}: Props) {
@@ -13,7 +15,7 @@ function SideBar({}: Props) {
   return (
     <div className="SideBar">
       {pathname}
-      <div className="logo">Lectury</div>
+      <Image alt="logo" src={LogoImg} className="logo" />
       <div className="navs">
         {navs.map((nav) => (
           <Link
