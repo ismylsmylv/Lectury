@@ -1,6 +1,9 @@
 .SideBar {
     padding: 20px;
+    height: 100vh;
     padding-right: 0;
+    border-right: 1px solid var(--color-border);
+    min-width: 250px;
 
     .logo {
         height: 50px;
@@ -9,11 +12,11 @@
     }
 
     .navs {
-        max-width: 200px;
-        width: 100%;
+
 
         .nav {
             color: var(--color-border);
+            border-right: 3px solid transparent;
 
             &:hover {
                 color: var(--color-white);
@@ -25,8 +28,15 @@
             border-top-right-radius: 0;
             color: var(--color-white);
             border-bottom-right-radius: 0;
-            border-right: 2px solid var(--color-primary);
+            background-color: var(--color-background-focused);
+            border-right-color: var(--color-primary);
         }
 
+        .count {
+            background-color: var(--color-secondary);
+            height: 20px;
+            width: 20px;
+            color: var(--color-white);
+        }
     }
 }
