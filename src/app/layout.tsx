@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <div className="flex w-full">
           <SideBar />
-          <div className="block">
+          <div className="block w-full">
             <Navbar />
             {children}
           </div>

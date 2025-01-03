@@ -1,0 +1,15 @@
+.Navbar {
+
+
+    .searchbar {
+        background-color: var(--color-surface);
+        width: 30%;
+
+        input {
+            background-color: transparent;
+            width: 100%;
+            outline: none;
+            color: var(--color-white);
+        }
+    }
+}
