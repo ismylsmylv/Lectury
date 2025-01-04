@@ -1,3 +1,4 @@
+"use client";
 import { FiPlusCircle } from "react-icons/fi";
 import { IoNotificationsOutline, IoSearch } from "react-icons/io5";
 import { LuIndentDecrease } from "react-icons/lu";
@@ -6,9 +7,11 @@ import "./style.scss";
 import ProfileImg from "@/app/assets/img/profile.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useAppSelector } from "@/app/lib/store";
 type Props = {};
 
 function Navbar({}: Props) {
+  const authState = useAppSelector((state) => state.auth.authState);
   return (
     <div className="Navbar flex justify-between items-center w-full p-5">
       <div className="left flex w-full gap-5 items-center ">
