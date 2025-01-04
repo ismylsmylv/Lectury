@@ -1,13 +1,13 @@
 "use client";
-import LogoImgLarge from "@/app/assets/img/logo_banner_transparent.svg";
-import LogoImgSmall from "@/app/assets/img/logo_icon_transparent.png";
+import LogoImgTitle from "@/app/assets/img/logo_banner_transparent_title.svg";
+import LogoImgSmall from "@/app/assets/img/logo_icon_transparent.svg";
+import { useAppSelector } from "@/app/lib/store";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
 import { navs } from "./mockdata";
 import "./style.scss";
-import { useAppSelector } from "@/app/lib/store";
 
 function SideBar() {
   const pathname = usePathname();
@@ -16,15 +16,20 @@ function SideBar() {
   );
   return (
     <div className={`SideBar ${hasSideBarCollapsed && "collapsed"}`}>
-      {JSON.stringify(hasSideBarCollapsed)}
-      <Image
-        alt="logo"
-        src={hasSideBarCollapsed ? LogoImgSmall : LogoImgLarge}
-        className="logo"
-        style={{
-          padding: hasSideBarCollapsed && "10px"
-        }}
-      />
+      <div className="flex gap-3 items-center pl-1">
+        <Image
+          alt="logo"
+          src={LogoImgSmall}
+          className="logo"
+          // style={{
+          //   padding: hasSideBarCollapsed && "10px"
+          // }}
+        />
+        {!hasSideBarCollapsed && (
+          <Image alt="title" src={LogoImgTitle} className="title" />
+        )}
+      </div>
+
       <div className="navs w-full">
         {navs.map((nav) => (
           <Link
