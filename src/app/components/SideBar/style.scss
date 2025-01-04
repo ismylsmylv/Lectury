@@ -8,6 +8,7 @@
     .logo {
         height: 50px;
         width: auto;
+        max-width: 150px;
         margin-bottom: 10px;
     }
 
@@ -39,4 +40,9 @@
             color: var(--color-white);
         }
     }
+}
+
+.collapsed {
+    max-width: 100px;
+    min-width: 100px;
 }

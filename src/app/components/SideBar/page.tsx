@@ -1,19 +1,30 @@
 "use client";
-import LogoImg from "@/app/assets/img/logo_banner_transparent.svg";
+import LogoImgLarge from "@/app/assets/img/logo_banner_transparent.svg";
+import LogoImgSmall from "@/app/assets/img/logo_icon_transparent.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
 import { navs } from "./mockdata";
 import "./style.scss";
-type Props = {};
+import { useAppSelector } from "@/app/lib/store";
 
-function SideBar({}: Props) {
+function SideBar() {
   const pathname = usePathname();
-
+  const hasSideBarCollapsed = useAppSelector(
+    (state) => state.auth.hasSideBarCollapsed
+  );
   return (
-    <div className="SideBar">
-      <Image alt="logo" src={LogoImg} className="logo" />
+    <div className={`SideBar ${hasSideBarCollapsed && "collapsed"}`}>
+      {JSON.stringify(hasSideBarCollapsed)}
+      <Image
+        alt="logo"
+        src={hasSideBarCollapsed ? LogoImgSmall : LogoImgLarge}
+        className="logo"
+        style={{
+          padding: hasSideBarCollapsed && "10px"
+        }}
+      />
       <div className="navs w-full">
         {navs.map((nav) => (
           <Link
@@ -29,11 +40,13 @@ function SideBar({}: Props) {
               ) : (
                 <nav.iconOutline size={25} />
               )}
-              {nav.title}
+              {!hasSideBarCollapsed && <>{nav.title}</>}
             </div>
-            <div className="count flex items-center justify-center rounded-full">
-              9
-            </div>
+            {!hasSideBarCollapsed && (
+              <div className="count flex items-center justify-center rounded-full">
+                9
+              </div>
+            )}
           </Link>
         ))}
       </div>

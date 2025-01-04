@@ -1,22 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 export interface IAuthState {
-  authState: boolean;
+  hasSideBarCollapsed: boolean;
 }
 
 const initialState: IAuthState = {
-  authState: false
+  hasSideBarCollapsed: false
 };
 
 export const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    setAuthState: (state, action: PayloadAction<boolean>) => {
-      state.authState = action.payload;
+    collapseSidebar: (state) => {
+      state.hasSideBarCollapsed = !state.hasSideBarCollapsed;
     }
   }
 });
 
-export const { setAuthState } = authSlice.actions;
+export const { collapseSidebar } = authSlice.actions;
 export const authReducer = authSlice.reducer;
