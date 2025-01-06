@@ -1,0 +1,13 @@
+.Breadcrumbs {
+    .route {
+        text-transform: capitalize;
+        color: var(--color-border);
+        font-weight: 500;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        background-color: var(--color-secondary);
+    }
+}
