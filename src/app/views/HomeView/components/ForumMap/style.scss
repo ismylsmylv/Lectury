@@ -1,3 +1,9 @@
 .ForumMap {
     background-color: var(--color-surface);
+
+    .forum {
+        min-height: 100px;
+        min-width: 100px;
+        background-color: var(--color-white);
+    }
 }

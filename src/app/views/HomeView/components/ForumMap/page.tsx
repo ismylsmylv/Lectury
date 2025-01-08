@@ -8,12 +8,25 @@ type Props = {};
 
 function ForumMap({}: Props) {
   return (
-    <div className="ForumMap">
-      <ChartExample />
+    <div className="ForumMap flex gap-5">
+      {/* <ChartExample /> */}
       {forums.map((forum) => (
-        <div className="forum" key={uuidv4()}>
+        <div
+          className="forum bg-cover bg-no-repeat bg-center rounded"
+          key={uuidv4()}
+          style={{
+            backgroundImage: `url(${forum.icon.src})`,
+            width: forum.departments.length * 50,
+            height: forum.departments.length * 50
+          }}
+        >
           {forum.title}
-          <Image height={50} width={50} src={forum.icon} alt="forum icon" />
+          {/* <Image height={50} width={50} src={forum.icon} alt="forum icon" /> */}
+          {forum.departments.map((department) => (
+            <div key={uuidv4()} className="department">
+              {department.name}
+            </div>
+          ))}
         </div>
       ))}
     </div>
