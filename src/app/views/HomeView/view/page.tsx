@@ -6,7 +6,7 @@ type Props = {};
 
 function HomeView({}: Props) {
   return (
-    <div className="HomeView p-5 rounded-lg">
+    <div className="HomeView p-5 rounded-lg ">
       <Breadcrumbs />
       <div className="content flex gap-5">
         <ForumMap />

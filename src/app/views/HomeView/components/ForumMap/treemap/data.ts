@@ -4,8 +4,8 @@ export const data = [
     children: [
       {
         title: "General economic, commercial and labour",
-        total: 18.8,
-        change: -2.8
+        total: 0.8,
+        change: 0
       },
       {
         title: "Agriculture, forestry, fishing and hunt",
