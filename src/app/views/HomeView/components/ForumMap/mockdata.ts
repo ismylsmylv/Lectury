@@ -11,7 +11,7 @@ import uocImg from "@/app/assets/img/forumdata/uoc.png";
 // import cmuImg from "@/app/assets/img/forumdata/cmu.png";
 // import duImg from "@/app/assets/img/forumdata/du.png";
 // import nuImg from "@/app/assets/img/forumdata/nu.png";
-// import puImg from "@/app/assets/img/forumdata/pu.png";
+import puImg from "@/app/assets/img/forumdata/pu.png";
 // import uowImg from "@/app/assets/img/forumdata/uow.png";
 // import uomImg from "@/app/assets/img/forumdata/uom.png";
 // import uopImg from "@/app/assets/img/forumdata/uop.png";
@@ -47,11 +47,7 @@ export const forums = [
     icon: ucbImg,
     size: 2,
     url: "https://www.berkeley.edu/forums",
-    departments: [
-      { id: 1, name: "Physics" },
-      { id: 2, name: "Sociology" },
-      { id: 3, name: "Mathematics" }
-    ]
+    departments: [{ id: 1, name: "Physics" }]
   },
   {
     title: "Massachusetts Institute of Technology Forum",
@@ -71,7 +67,7 @@ export const forums = [
     url: "https://www.uchicago.edu/forums",
     departments: [
       { id: 1, name: "Economics" },
-      { id: 2, name: "Philosophy" },
+
       { id: 3, name: "Political Science" }
     ]
   },
@@ -80,11 +76,7 @@ export const forums = [
     icon: cuImg,
     size: 2,
     url: "https://www.columbia.edu/forums",
-    departments: [
-      { id: 1, name: "Journalism" },
-      { id: 2, name: "Architecture" },
-      { id: 3, name: "Environmental Science" }
-    ]
+    departments: [{ id: 1, name: "Journalism" }]
   },
   {
     title: "Yale University Forum",
@@ -96,14 +88,19 @@ export const forums = [
       { id: 2, name: "Music" },
       { id: 3, name: "Law" }
     ]
-  }
+  },
   // Small objects
-  // {
-  //   title: "Princeton University Forum",
-  //   icon: puImg,
-  //   size: 1,
-  //   url: "https://www.princeton.edu/forums"
-  // },
+  {
+    title: "Princeton University Forum",
+    icon: puImg,
+    size: 1,
+    url: "https://www.princeton.edu/forums",
+    departments: [
+      { id: 1, name: "Computer Science" },
+      { id: 3, name: "Design" }
+    ]
+  }
+
   // {
   //   title: "University of Pennsylvania Forum",
   //   icon: uopImg,

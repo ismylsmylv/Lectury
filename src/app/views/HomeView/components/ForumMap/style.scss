@@ -1,9 +1,33 @@
 .ForumMap {
     background-color: var(--color-surface);
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 50px;
+    gap: 5px;
+    width: 100%;
+
 
     .forum {
-        min-height: 100px;
-        min-width: 100px;
+        // min-height: 100px;
+        // min-width: 100px;
         background-color: var(--color-white);
+        background-size: contain;
+        background-position: center;
+        overflow: hidden;
+        display: inline-block;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
     }
+
+
+
 }
