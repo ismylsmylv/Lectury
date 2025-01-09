@@ -8,7 +8,7 @@ export const staff = [
   {
     displayName: "Darnell Steward",
     role: "System Admin",
-    img: ProfileImg
+    img: ""
   },
   {
     displayName: "Darnell Steward",
@@ -18,6 +18,6 @@ export const staff = [
   {
     displayName: "Darnell Steward",
     role: "System Admin",
-    img: ProfileImg
+    img: ""
   }
 ];

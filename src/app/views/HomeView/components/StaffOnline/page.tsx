@@ -1,29 +1,45 @@
 import { v4 as uuidv4 } from "uuid";
 import React from "react";
 import "./style.scss";
+
 import { staff } from "./mockdata";
+
 import { FiUsers } from "react-icons/fi";
+
+import { FaUser } from "react-icons/fa6";
+import Image from "next/image";
+import Link from "next/link";
 
 type Props = {};
 
 function StaffOnline({}: Props) {
   return (
-    <div>
-      <div className="heading flex items-center justify-start gap-2">
-        <FiUsers />
-        <h3>staff online</h3>
+    <div className="StaffOnline mb-15">
+      <div className="heading flex items-center justify-start gap-2 mb-3">
+        <FiUsers /> <h3 className="capitalize font-semibold ">staff online</h3>
       </div>
       <div className="staff">
         {staff.map((member) => (
-          <div key={uuidv4()} className="member">
-            <div className="img">
-              <img src="" alt="" />
+          <Link
+            href={"#"}
+            key={uuidv4()}
+            className="member flex items-center justify-start gap-3 mb-3 pr-3  rounded-lg "
+          >
+            <div className="img rounded-lg flex items-center justify-center">
+              {member.img ? (
+                <Image alt="profile picture" src={member.img} />
+              ) : (
+                <FaUser />
+              )}
             </div>
-            <div className="info">
-              <div className="name">{member.displayName}</div>
-              <div className="role">{member.role}</div>
+            <div className="info opacity-70 hover:opacity-100">
+              <div className="name font-medium line-clamp-1">
+                {" "}
+                {member.displayName}
+              </div>
+              <div className="role font-light line-clamp-1"> {member.role}</div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

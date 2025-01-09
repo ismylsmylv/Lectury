@@ -1,1 +1,51 @@
-.StaffOnline {}
+.StaffOnline {
+    border-bottom: 1px solid var(--color-border);
+    width: 100%;
+    max-width: 400px;
+
+    .heading {
+        h3 {
+            color: var(--color-white);
+        }
+
+        svg {
+            color: var(--color-border);
+        }
+    }
+
+    .staff {
+        .member {
+            &:hover {
+                background-color: var(--color-background-focused);
+            }
+
+            .img {
+                height: 60px;
+                width: 60px;
+                background-color: var(--color-surface);
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                svg {
+                    color: var(--color-border);
+                }
+            }
+
+            .info {
+                color: var(--color-white);
+
+                .name {
+                    overflow: hidden;
+                    max-width: 200px;
+                }
+
+            }
+        }
+    }
+}
