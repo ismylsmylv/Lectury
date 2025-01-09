@@ -8,7 +8,7 @@ type Props = {};
 
 function ForumMap({}: Props) {
   return (
-    <div className="ForumMap flex gap-5 p-5 rounded">
+    <div className="ForumMap flex gap-5 p-5 rounded-3xl">
       {/* <ChartExample /> */}
       {sortDepartmentsByLength(forums).map((forum) => {
         const size = forum.departments.length * 50;
