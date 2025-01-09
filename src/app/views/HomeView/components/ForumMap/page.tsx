@@ -3,18 +3,19 @@ import { v4 as uuidv4 } from "uuid";
 import { forums } from "./mockdata";
 import "./style.scss";
 import Link from "next/link";
+import { sortDepartmentsByLength } from "@/app/utils/functions";
 type Props = {};
 
 function ForumMap({}: Props) {
   return (
     <div className="ForumMap flex gap-5 p-5 rounded">
       {/* <ChartExample /> */}
-      {forums.map((forum) => {
+      {sortDepartmentsByLength(forums).map((forum) => {
         const size = forum.departments.length * 50;
         return (
           <Link
             href={"#"}
-            className="forum bg-cover bg-no-repeat bg-center rounded-full"
+            className="forum bg-cover bg-no-repeat bg-center rounded-full mr-1 ml-1"
             key={uuidv4()}
             style={{
               width: `${size}px`,

@@ -8,7 +8,8 @@ function HomeView({}: Props) {
   return (
     <div className="HomeView p-5 rounded-lg ">
       <Breadcrumbs />
-      <div className="content flex gap-5">
+      <h1 className="capitalize font-semibold">largest community forums</h1>
+      <div className="content flex gap-5  ">
         <ForumMap />
       </div>
     </div>
