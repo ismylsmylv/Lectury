@@ -2,16 +2,18 @@ import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 import { forums } from "./mockdata";
 import "./style.scss";
+import Link from "next/link";
 type Props = {};
 
 function ForumMap({}: Props) {
   return (
-    <div className="ForumMap flex gap-5 p-5">
+    <div className="ForumMap flex gap-5 p-5 rounded">
       {/* <ChartExample /> */}
       {forums.map((forum) => {
         const size = forum.departments.length * 50;
         return (
-          <div
+          <Link
+            href={"#"}
             className="forum bg-cover bg-no-repeat bg-center rounded-full"
             key={uuidv4()}
             style={{
@@ -26,7 +28,7 @@ function ForumMap({}: Props) {
                 {department.name}
               </div>
             ))} */}
-          </div>
+          </Link>
         );
       })}
     </div>

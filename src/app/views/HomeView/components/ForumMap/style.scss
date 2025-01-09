@@ -20,6 +20,11 @@
         background-position: center;
         overflow: hidden;
         display: inline-block;
+        outline: 3px solid transparent;
+
+        &:hover {
+            outline-color: var(--color-primary);
+        }
 
         img {
             height: 100%;
