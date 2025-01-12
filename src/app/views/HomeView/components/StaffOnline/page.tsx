@@ -9,15 +9,15 @@ import { FiUsers } from "react-icons/fi";
 import { FaUser } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
+import HeadingSm from "@/app/components/HeadingSm/page";
 
 type Props = {};
 
 function StaffOnline({}: Props) {
+  const headData = { text: "staff online", icon: FiUsers };
   return (
     <div className="StaffOnline mb-15">
-      <div className="heading flex items-center justify-start gap-2 mb-3">
-        <FiUsers /> <h3 className="capitalize font-semibold ">staff online</h3>
-      </div>
+      <HeadingSm heading={headData} />
       <div className="staff">
         {staff.map((member) => (
           <Link
