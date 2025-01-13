@@ -1,1 +1,25 @@
-.Forums {}
+.Forums {
+    max-width: 900px;
+
+    .forum {
+        background-color: var(--color-surface);
+
+        h3 {
+            color: var(--color-white);
+        }
+
+        .icon {
+            height: 50px;
+            width: 50px;
+        }
+
+        .infos {
+
+            p,
+            h4 {
+                color: var(--color-white);
+            }
+
+        }
+    }
+}
