@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import "./style.scss";
 
 import { BiMessageDetail } from "react-icons/bi";
@@ -16,15 +17,26 @@ function Forums({}: Props) {
     text: "community forums",
     icon: BiMessageDetail
   };
-
+  const [forumType, setForumType] = useState("");
+  const handleSelect = (type: string) => {
+    setForumType(type);
+  };
   return (
     <div className="Forums w-full mt-5">
       <HeadingSm heading={headData} />
-      <div className="types flex items-center justify-start gap-5 mt-3 mb-3">
-        {forumTypes.map((type) => {
+      <div className="types flex items-center justify-start gap-2 mt-3 mb-3">
+        {forumTypes.map((elem) => {
           return (
-            <button className="type capitalize rounded-xl p-3" key={uuidv4()}>
-              {type.title}
+            <button
+              className={`type capitalize rounded-xl p-2 px-4 ${
+                forumType == elem.type && "active"
+              }`}
+              key={uuidv4()}
+              onClick={() => {
+                handleSelect(elem.type);
+              }}
+            >
+              {elem.title}
             </button>
           );
         })}

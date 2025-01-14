@@ -26,6 +26,19 @@
     .types {
         .type {
             color: var(--color-white);
+            border: 1px solid var(--color-border);
+
+            &:hover {
+                border-color: var(--color-secondary);
+
+            }
+        }
+
+        // .type:hover,
+        .active {
+            border-color: var(--color-secondary);
+            background-color: var(--color-secondary);
+
         }
     }
 }
