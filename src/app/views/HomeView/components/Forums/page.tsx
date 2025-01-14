@@ -9,6 +9,7 @@ import { forums, forumTypes } from "./mockdata";
 
 import { v4 as uuidv4 } from "uuid";
 import Link from "next/link";
+import { convertNumbersToString } from "@/app/utils/functions";
 
 type Props = {};
 
@@ -62,11 +63,11 @@ function Forums({}: Props) {
               </div>
               <div className="infos capitalize flex gap-5 font-semibold">
                 <div className="box">
-                  <p> {forum.threads}</p>
+                  <p> {convertNumbersToString(forum.threads)}</p>
                   <h4 className="opacity-70">threads</h4>
                 </div>
                 <div className="box">
-                  <p> {forum.messages}</p>
+                  <p> {convertNumbersToString(forum.messages)}</p>
                   <h4 className="opacity-70">messages</h4>
                 </div>
               </div>

@@ -6,7 +6,7 @@ export const forums = [
     title: "Installation, Upgrade and Support",
     bg: "#0084FF",
     icon: FaRocket,
-    threads: 1222,
+    threads: 234,
     messages: 2467348
   },
   {
@@ -20,8 +20,8 @@ export const forums = [
     title: "Troubleshooting and Problems",
     bg: "#7A5DEC",
     icon: FaHeadphones,
-    threads: 1222,
-    messages: 2467348
+    threads: 12422,
+    messages: 302500
   },
   {
     title: "Troubleshooting and Problems",

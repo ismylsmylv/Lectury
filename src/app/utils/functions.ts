@@ -16,3 +16,11 @@ export function sortDepartmentsByLength(data) {
 
   return result;
 }
+
+export function convertNumbersToString(number: number) {
+  // adds points and k to large numbers
+  const useK = number > 1000 ? "k" : "";
+  const divider = useK ? 100 : 1;
+  const dividedNumber = (number / divider).toFixed(0) + useK;
+  return dividedNumber;
+}
