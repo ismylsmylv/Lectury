@@ -4,7 +4,7 @@ import "./style.scss";
 import { BiMessageDetail } from "react-icons/bi";
 import HeadingSm from "@/app/components/HeadingSm/page";
 
-import { forums } from "./mockdata";
+import { forums, forumTypes } from "./mockdata";
 
 import { v4 as uuidv4 } from "uuid";
 import Link from "next/link";
@@ -18,11 +18,16 @@ function Forums({}: Props) {
   };
 
   return (
-    <div className="Forums w-full ">
+    <div className="Forums w-full mt-5">
       <HeadingSm heading={headData} />
-      <div className="types">
-        <button>all</button> <button>official forums</button>
-        <button>customer forums</button> <button>public forums</button>
+      <div className="types flex items-center justify-start gap-5 mt-3 mb-3">
+        {forumTypes.map((type) => {
+          return (
+            <button className="type capitalize rounded-xl p-3" key={uuidv4()}>
+              {type.title}
+            </button>
+          );
+        })}
       </div>
       <div className="list">
         {forums.map((forum) => {

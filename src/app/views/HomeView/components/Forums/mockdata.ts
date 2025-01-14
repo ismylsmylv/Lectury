@@ -31,3 +31,22 @@ export const forums = [
     messages: 2467348
   }
 ];
+
+export const forumTypes = [
+  {
+    title: "all",
+    type: "all"
+  },
+  {
+    title: "official forums",
+    type: "official"
+  },
+  {
+    title: "customer forums",
+    type: "customer"
+  },
+  {
+    title: "public forums",
+    type: "public"
+  }
+];
