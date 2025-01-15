@@ -17,7 +17,7 @@ function Navbar() {
     (state) => state.auth.hasSideBarCollapsed
   );
   return (
-    <div className="Navbar flex justify-between items-center w-full p-5">
+    <div className="Navbar flex justify-between items-center w-full p-5 sticky top-0 right-0 z-50">
       <div className="left flex w-full gap-5 items-center ">
         <button
           onClick={() => {
