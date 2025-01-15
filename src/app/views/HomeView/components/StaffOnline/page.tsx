@@ -34,7 +34,6 @@ function StaffOnline({}: Props) {
             </div>
             <div className="info opacity-70 hover:opacity-100">
               <div className="name font-medium line-clamp-1">
-                {" "}
                 {member.displayName}
               </div>
               <div className="role font-light line-clamp-1"> {member.role}</div>
@@ -42,6 +41,7 @@ function StaffOnline({}: Props) {
           </Link>
         ))}
       </div>
+      <div className="line mt-3"></div>
     </div>
   );
 }
