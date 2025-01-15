@@ -15,7 +15,11 @@ function SideBar() {
     (state) => state.auth.hasSideBarCollapsed
   );
   return (
-    <div className={`SideBar ${hasSideBarCollapsed && "collapsed"}`}>
+    <div
+      className={`SideBar sticky top-0 left-0 ${
+        hasSideBarCollapsed && "collapsed"
+      }`}
+    >
       <div className="flex gap-3 items-center pl-1">
         <Image
           alt="logo"
