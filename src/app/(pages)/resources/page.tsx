@@ -1,4 +1,4 @@
-import ResourcesView from "@/app/views/ResourcesView/page";
+import ResourcesView from "@/app/views/ResourcesView/view/page";
 import React from "react";
 
 type Props = {};
