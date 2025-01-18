@@ -5,6 +5,7 @@ import ForumMap from "../components/ForumMap/page";
 import StaffOnline from "../components/StaffOnline/page";
 import { FiUsers } from "react-icons/fi";
 import Forums from "../components/Forums/page";
+import Threads from "../components/Threads/page";
 type Props = {};
 
 function HomeView({}: Props) {
@@ -20,8 +21,11 @@ function HomeView({}: Props) {
         </div>
         <StaffOnline />
       </div>
-      <div className="flex">
+      <div className="flex items-start justify-start">
         <Forums />
+        <div>
+          <Threads />
+        </div>
       </div>
     </div>
   );
