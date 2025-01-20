@@ -1,42 +1,41 @@
 import { v4 as uuidv4 } from "uuid";
-import React from "react";
 import "./style.scss";
 
-import { staff } from "./mockdata";
+import { AiOutlineHistory } from "react-icons/ai";
+import { LuDot } from "react-icons/lu";
+import { threads } from "./mockdata";
 
-import { FiUsers } from "react-icons/fi";
-
-import { FaUser } from "react-icons/fa6";
+import HeadingSm from "@/app/components/HeadingSm/page";
 import Image from "next/image";
 import Link from "next/link";
-import HeadingSm from "@/app/components/HeadingSm/page";
+import { FaUser } from "react-icons/fa6";
 
-type Props = {};
-
-function Threads({}: Props) {
-  const headData = { text: "staff online", icon: FiUsers };
+function Threads() {
+  const headData = { text: "recent threads", icon: AiOutlineHistory };
   return (
     <div className="Threads mb-15">
       <HeadingSm heading={headData} />
       <div className="staff">
-        {staff.map((member) => (
+        {threads.map((thread) => (
           <Link
             href={"#"}
             key={uuidv4()}
-            className="member flex items-center justify-start gap-3 mb-3 pr-3  rounded-lg "
+            className="member flex items-start justify-start gap-3 mb-3 pr-3  rounded-lg "
           >
             <div className="img rounded-lg flex items-center justify-center">
-              {member.img ? (
-                <Image alt="profile picture" src={member.img} />
+              {thread.img ? (
+                <Image alt="profile picture" src={thread.img} />
               ) : (
                 <FaUser />
               )}
             </div>
             <div className="info opacity-70 hover:opacity-100">
-              <div className="name font-medium line-clamp-1">
-                {member.displayName}
+              <div className="name font-medium  mb-2">{thread.displayName}</div>
+              <div className="role flex items-center justify-start text-sm font-normal mb-2">
+                By: {thread.user} <LuDot />
+                {thread.date}
               </div>
-              <div className="role font-light line-clamp-1"> {member.role}</div>
+              <div className="category text-xs  mb-2">{thread.category}</div>
             </div>
           </Link>
         ))}
