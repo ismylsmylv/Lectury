@@ -28,12 +28,13 @@ function Resources() {
             </div>
             <div className="info opacity-70 hover:opacity-100">
               <div className="name font-medium  mb-2">{thread.displayName}</div>
-              <div className="category text-xs  mb-2">{thread.category}</div>
+              <div className="category text-xs  mb-2">
+                Category of {thread.category}
+              </div>
             </div>
           </Link>
         ))}
       </div>
-      <div className="line mt-3"></div>
     </div>
   );
 }
