@@ -6,6 +6,7 @@ import StaffOnline from "../components/StaffOnline/page";
 import { FiUsers } from "react-icons/fi";
 import Forums from "../components/Forums/page";
 import Threads from "../components/Threads/page";
+import Resouces from "../components/Resouces/page";
 type Props = {};
 
 function HomeView({}: Props) {
@@ -27,6 +28,7 @@ function HomeView({}: Props) {
         <div className="right">
           <StaffOnline />
           <Threads />
+          <Resouces />
         </div>
       </div>
     </div>
