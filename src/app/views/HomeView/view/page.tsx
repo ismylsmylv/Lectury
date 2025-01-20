@@ -1,15 +1,12 @@
 import Breadcrumbs from "@/app/components/Breadcrumbs/page";
-import React from "react";
-import "./style.scss";
 import ForumMap from "../components/ForumMap/page";
-import StaffOnline from "../components/StaffOnline/page";
-import { FiUsers } from "react-icons/fi";
 import Forums from "../components/Forums/page";
+import Resouces from "../components/Resources/page";
+import StaffOnline from "../components/StaffOnline/page";
 import Threads from "../components/Threads/page";
-import Resouces from "../components/Resouces/page";
-type Props = {};
+import "./style.scss";
 
-function HomeView({}: Props) {
+function HomeView() {
   return (
     <div className="HomeView p-5 rounded-lg ">
       <Breadcrumbs />
