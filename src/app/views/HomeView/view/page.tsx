@@ -13,17 +13,19 @@ function HomeView({}: Props) {
     <div className="HomeView p-5 rounded-lg ">
       <Breadcrumbs />
       <div className="flex gap-10">
-        <div className="map">
-          <h1 className="capitalize font-semibold">largest community forums</h1>
-          <div className="content flex gap-5  ">
-            <ForumMap />
+        <div className="left">
+          <div className="map">
+            <h1 className="capitalize font-semibold">
+              largest community forums
+            </h1>
+            <div className="content flex gap-5  ">
+              <ForumMap />
+            </div>
           </div>
+          <Forums />
         </div>
-        <StaffOnline />
-      </div>
-      <div className="flex items-start justify-start">
-        <Forums />
-        <div>
+        <div className="right">
+          <StaffOnline />
           <Threads />
         </div>
       </div>

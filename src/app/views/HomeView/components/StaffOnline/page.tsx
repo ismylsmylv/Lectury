@@ -16,7 +16,7 @@ type Props = {};
 function StaffOnline({}: Props) {
   const headData = { text: "staff online", icon: FiUsers };
   return (
-    <div className="StaffOnline mb-15">
+    <div className="StaffOnline mb-10">
       <HeadingSm heading={headData} />
       <div className="staff">
         {staff.map((member) => (
@@ -41,7 +41,7 @@ function StaffOnline({}: Props) {
           </Link>
         ))}
       </div>
-      <div className="line mt-3"></div>
+      <div className="line mt-10"></div>
     </div>
   );
 }
