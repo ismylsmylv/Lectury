@@ -1,15 +1,60 @@
-import { forums } from "../../views/HomeView/components/Forums/mockdata";
+import { NextResponse } from "next/server";
+import { MongoClient } from "mongodb";
 
-export const dynamic = "force-static";
+const uri = process.env.MONGODB_URI;
+const dbName = process.env.MONGODB_DB;
 
-export async function GET() {
-  // const res = await fetch('https://data.mongodb-api.com/...', {
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //     'API-Key': process.env.DATA_API_KEY,
-  //   },
-  // })
-  // const data = await res.json()
-  const data = forums;
-  return Response.json({ data });
+let client;
+
+export async function GET(request) {
+  try {
+    if (!client) {
+      client = new MongoClient(uri, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      });
+      await client.connect();
+    }
+
+    const db = client.db(dbName);
+    const forumsCollection = db.collection("forums");
+
+    const forums = await forumsCollection.find({}).toArray();
+
+    return NextResponse.json(forums, { status: 200 });
+  } catch (error) {
+    console.error("Error fetching data from MongoDB:", error);
+
+    return NextResponse.json(
+      { error: "Failed to fetch data" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function POST(request) {
+  try {
+    const body = await request.json();
+
+    if (!client) {
+      client = new MongoClient(uri, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      });
+      await client.connect();
+    }
+
+    const db = client.db(dbName);
+    const forumsCollection = db.collection("forums");
+
+    const result = await forumsCollection.insertOne(body);
+
+    return NextResponse.json(
+      { message: "Forum added successfully", id: result.insertedId },
+      { status: 201 }
+    );
+  } catch (error) {
+    console.error("Error inserting data into MongoDB:", error);
+    return NextResponse.json({ error: "Failed to add user" }, { status: 500 });
+  }
 }
