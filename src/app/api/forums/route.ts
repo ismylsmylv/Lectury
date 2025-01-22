@@ -1,4 +1,4 @@
-import { forums } from "../views/HomeView/components/Forums/mockdata";
+import { forums } from "../../views/HomeView/components/Forums/mockdata";
 
 export const dynamic = "force-static";
 
