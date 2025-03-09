@@ -18,7 +18,7 @@ function Forums({}: Props) {
     text: "community forums",
     icon: BiMessageDetail
   };
-  const [forumType, setForumType] = useState("");
+  const [forumType, setForumType] = useState("all");
   const handleSelect = (type: string) => {
     setForumType(type);
   };
